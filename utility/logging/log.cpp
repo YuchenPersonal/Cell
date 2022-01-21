@@ -90,7 +90,13 @@ void Log::printMessage(const std::string& message, const LOG_TYPE type)
     if (type == LOG_TYPE::LOG_DEBUG)  typeName = "DEBUG";
     if (type == LOG_TYPE::LOG_INIT)   typeName = "INIT";
     if (type == LOG_TYPE::LOG_ERROR)  typeName = "ERROR";
-    if(type == LOG_TYPE::LOG_WARNING) typeName = "WARNING";
+    if (type == LOG_TYPE::LOG_WARNING) typeName = "WARNING";
 
-    std::cout << std::setw(7) << typeName << ":  " << message << std::endl;
+    std::cout << "Cell Log " << typeName << ": " << message;
+
+    char lastChar = message.back();
+    if (lastChar != '\n')
+    {
+        std::cout << std::endl;
+    }
 }
