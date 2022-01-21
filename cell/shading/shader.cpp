@@ -30,7 +30,7 @@ namespace Cell
         int status;
         char log[1024];
 
-        // if a list of define statements is specified, add these  to the start of the shader 
+        // if a list of define statements is specified, add these to the start of the shader 
         // source, s.t. we can selectively compile different shaders based on the defines we set.
         if (defines.size() > 0)
         {

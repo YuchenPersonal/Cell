@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
         glfwWindowHint(GLFW_RESIZABLE, true);
 
     
-        GLFWwindow* window = glfwCreateWindow(1920, 1080, "Cell", nullptr, nullptr);           
+        GLFWwindow* window = glfwCreateWindow(960, 540, "Cell", nullptr, nullptr);           
         if (window == nullptr)
         {
             glfwTerminate();
@@ -384,11 +384,12 @@ void mousePosFunc(GLFWwindow *window, double xpos, double ypos)
         firstMouse = false;
     }
 
-        float xoffset = xpos - lastX;
-        float yoffset = lastY - ypos;  // reversed since y-coordinates go from bottom to left
+    float xoffset = xpos - lastX;
+    float yoffset = lastY - ypos;  // reversed since y-coordinates go from bottom to left
 
-        lastX = xpos;
-        lastY = ypos;
+    lastX = xpos;
+    lastY = ypos;
+
     if (!renderGUI)
     {
         camera.InputMouse(xoffset, yoffset);

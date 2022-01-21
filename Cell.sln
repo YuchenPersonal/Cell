@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "math", "math\Math.vcxproj", "{29EEBECF-A9C1-479F-9DAE-AD02AC29E921}"
 EndProject
@@ -10,6 +10,11 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cell", "cell\Cell.vcxproj", "{12711140-C3F0-4921-A21E-F32B5DB98F33}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "demo", "demo\Demo.vcxproj", "{D7D44C0F-7527-42B7-8C2C-FB50F4792E62}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2C3C6211-0D04-4C82-8042-F379DCFFA2AB} = {2C3C6211-0D04-4C82-8042-F379DCFFA2AB}
+		{12711140-C3F0-4921-A21E-F32B5DB98F33} = {12711140-C3F0-4921-A21E-F32B5DB98F33}
+		{29EEBECF-A9C1-479F-9DAE-AD02AC29E921} = {29EEBECF-A9C1-479F-9DAE-AD02AC29E921}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,5 +59,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA0E2F34-C6EF-4EEC-9617-7160145581F9}
 	EndGlobalSection
 EndGlobal
