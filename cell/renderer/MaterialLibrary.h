@@ -1,8 +1,9 @@
 #ifndef CELL_MATERIAL_LIBRARY_H
 #define CELL_MATERIAL_LIBRARY_H
 
-#include <vector>
 #include <map>
+#include <string>
+#include <vector>
 
 namespace Cell
 {
