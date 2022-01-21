@@ -2,7 +2,7 @@ Cell - Graphics engine
 ======
 Welcome to the development repository of Cell, an open-source OpenGL graphics engine aimed to serve as an educational repository 
 for learning how a larger graphics engine can be structured and organized. A large focus of Cell is building an engine that is both easy 
-to use and read. Cell also aims to provide both flexible and properly maintainable code. Note that this project is **not** finished, so code may still be vague nor are there proper build files yet.
+to use and read. Cell also aims to provide both flexible and properly maintainable code. Note that this project is **NOT** finished, so code may still be vague nor are there proper build files yet.
 
 ![Logo of Cell Graphics Engine](logo.png "Cell Graphics Engine Logo")
 
@@ -10,6 +10,29 @@ The engine will be heavily commented and documented from within the source code 
 to take a look at any of its inner workings, without feeling too overwhelming. 
 
 ![Cell Preview](preview.png "Cell Preview")
+
+Known Issues
+------
+It's not working with NV GPUs. : ( I'm trying to fix it.
+
+Getting up and running
+------
+1. git clone --recursive https://github.com/YuchenPersonal/Cell.git
+We need --recursive to get the matching version assimp.
+
+2. Generate assimp vs project using CMake and make sure you congfiure it as Win32(x86) becasue x64 build assimp will have link errors.
+
+3. Open Assimp.sln and build projects assimp and zlibstatic (Win32)
+
+4. Copy assimp-vc140-mt.lib to Cell/lib and rename it to assimp.lib.
+
+5. Copy zlibstaticd.lib to Cell/lib and rename it to zlibstatic.lib.
+
+6. Copy assimp-vc140-mt.dll to Cell/build.
+
+7. Open Cell.sln and build all projects in the order math, utility, cell, demo.
+
+8. Set demo as your startup project and go.
 
 Feature List (complete:base-functionality)
 ------
