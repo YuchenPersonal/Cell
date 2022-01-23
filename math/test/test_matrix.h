@@ -56,5 +56,4 @@ bool MatrixIndexing()
     return success;
 }
 
-
 #endif

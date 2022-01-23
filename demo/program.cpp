@@ -289,6 +289,10 @@ int main(int argc, char *argv[])
                 renderGUI = !renderGUI;
                 keysActive[GLFW_KEY_TAB] = true;
             }
+            if (keysPressed[GLFW_KEY_ESCAPE])
+            {
+                glfwSetWindowShouldClose(window, true);
+            }
 
             // update render logic
             camera.Update(deltaTime);
